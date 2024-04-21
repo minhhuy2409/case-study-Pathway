@@ -1,11 +1,15 @@
 user = input("Nhập tên người chơi: ")
 password = input("Nhập mật khẩu: ")
 
-if user == "player" and password == "playp":
-    print("Welcome!")
-else:
-    print("Wrong password and username.")
-print("vui lòng chỉ nhập A B C D")
+while user != "player" or password != "play":
+    print("Tên người chơi hoặc mật khẩu không đúng. Vui lòng nhập lại.")
+    user = input("Nhập tên người chơi: ")
+    password = input("Nhập mật khẩu: ")
+
+print("Welcome!")
+print("Vui lòng chỉ nhập A, B, C hoặc D.")
+
+
 questions = [
     {
         "question": "1 Python được phát hành vào năm nào?",
@@ -116,11 +120,17 @@ for question in questions:
     print(question["question"])
     for option, value in question["options"].items():
         print(option + ".", value)
-    answer = input("Nhập đáp án của bạn: ").upper()
+    while True:
+        answer = input("Nhập đáp án của bạn (A/B/C/D): ").upper()
+        if answer in ["A", "B", "C", "D"]:
+            break
+        else:
+            print("Vui lòng chỉ nhập A, B, C hoặc D!")
     if answer == question["answer"]:
         print("Đúng!")
         score += 1
     else:
         print("Sai! Đáp án đúng là:", question["answer"])
+
 print("Số điểm của bạn là:", score)
 
