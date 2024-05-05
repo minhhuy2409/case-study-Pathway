@@ -140,21 +140,6 @@ for question in questions:
     else:
         print("Sai! Đáp án đúng là:", question["answer"])
         
-for question1 in questions:
-    print(question["question1"])
-    for option, value in question["options"].items():
-        print(option + ".", value)
-    while True:
-        answer = input("Nhập đáp án của bạn (A/B/C/D): ").upper()
-        if answer in ["A", "B", "C", "D"]:
-            break
-        else:
-            print("Vui lòng chỉ nhập A, B, C hoặc D!")
-    if answer == question["answer"]:
-        print("Đúng!")
-        money += 100000
-    else:
-        print("Sai! Đáp án đúng là:", question1["answer"])        
 
 
 print("Số tiền của bạn là:", money)
