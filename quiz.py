@@ -2,8 +2,6 @@ print("chào mừng bạn đến với AI LÀ TRIỆU PHÚ")
 print("luật chơi như sau:")
 print("Bạn trả lời đúng đáp án bạn sẽ được 100k từ câu 1 đến 4, 200k từ 5 đến 7 và 300k từ 8 đến 10)
 print("Bạn sẽ có 4 quyền trợ giúp là: hỏi ý khán giả, 50 50 và 2 gợi ý đáp án")
-user = input("Nhập tên người chơi: ")
-password = input("Nhập mật khẩu: ")
 
 import random
 
